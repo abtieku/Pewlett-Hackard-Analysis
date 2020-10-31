@@ -7,22 +7,21 @@ The purpose of the analysis was two-fold: one was to to determine the number of 
 **Purpose 1: Number of retiring employees per title**
 
 I queried the existing tables and created a new table filtered by people whose birth dates are between 1952 and 1955, or those who are likely to retire soon. Here are the results:
+
 ![](./Resources/retiring_titles_screenshot.png)  
 
-- The company will have the largest  shortage of these types of workers:
 
-  - Engineer
+
+- The company will have the largest  shortage of these types of workers:
+- Engineer
   - Senior Staff
   - Staff
-  
 - The company will have a large shortage of these types of workers:
 
   - Senior Engineer
   - Assistant Engineer
   - Technique Leader
-
 - The company will have hardly any Manager positions vacated.
-
 - The total number of soon-to-be retirees is 90,398.
 
 **Purpose 2: Employees eligible to participate in a mentorship program**
