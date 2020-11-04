@@ -13,14 +13,13 @@ I queried the existing tables and created a new table filtered by people whose b
 
 
 - The company will have the largest  shortage of these types of workers:
-- Engineer
+  - Senior Engineer
   - Senior Staff
+  - Engineer
   - Staff
 - The company will have a large shortage of these types of workers:
-
-  - Senior Engineer
-  - Assistant Engineer
   - Technique Leader
+  - Assistant Engineer
 - The company will have hardly any Manager positions vacated.
 - The total number of soon-to-be retirees is 90,398.
 
@@ -28,7 +27,7 @@ I queried the existing tables and created a new table filtered by people whose b
 
 I queried the existing tables and created a new table filtered by current employees whose birth dates are in 1965, or those who are about 55 years old. 
 
-- There were 1549 total employees who are eligible to participate in a mentorship program. 
+- There were 1549 total employees who are eligible to participate in a mentorship program. There are not enough to mentor the next generation of employees coming in.
 
 - Of the total, there were 748 Engineers of some type.
 
@@ -40,7 +39,7 @@ From the data, I can draw these conclusions:
 
 - The company will have a large shortage of various positions (especially Engineers and Staff Members) very soon, and they need to get hiring!
 
-- To assist HR in the hiring process, we could build a table which only shows the engineering positions. It's based on retiring_titles:
+- To assist HR in the hiring process, we could build a table which only shows the engineering positions, which is the bulk of the positions. It's based on retiring_titles:
 ````
     SELECT count, title
     INTO engineering_titles
@@ -54,9 +53,9 @@ From the data, I can draw these conclusions:
 	t.title,
 	s.salary
 	INTO mentorship_eligibility_salary
-	FROM employees as e LEFT JOIN
-	dept_emp as de ON (e.emp_no = de.emp_no) LEFT JOIN
-	titles as t ON (e.emp_no = t.emp_no) LEFT JOIN
+	FROM employees as e INNER JOIN
+	dept_emp as de ON (e.emp_no = de.emp_no) INNER JOIN
+	titles as t ON (e.emp_no = t.emp_no) INNER JOIN
 	salaries as s on (e.emp_no = s.emp_no)
 	WHERE (e.birth_date BETWEEN '1965-01-01' AND '1965-12-31') AND (de.to_date = '9999-01-01')
 	ORDER BY e.emp_no;
