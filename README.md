@@ -8,7 +8,7 @@ The purpose of the analysis was two-fold: one was to to determine the number of 
 
 I queried the existing tables and created a new table filtered by people whose birth dates are between 1952 and 1955, or those who are likely to retire soon. Here are the results:
 
-![](./Resources/retiring_titles_screenshot.png)  
+![](./Resources/retiring_titles_screenshot2.png)  
 
 
 
